@@ -1,9 +1,4 @@
-import os
 import unittest
-import re
-import requests
-import urllib2
-import json
 from mysite import app
 
 class MySiteTestCase(unittest.TestCase):
