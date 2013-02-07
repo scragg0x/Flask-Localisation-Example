@@ -25,9 +25,6 @@ def add_language_code(endpoint, values):
 @mod.url_value_preprocessor
 def pull_lang_code(endpoint, values):
     g.lang_code = values.pop('lang_code')
-    url = request.url.split('/', 3)
-    if not g.lang_code:
-        g.lang_code = sites[url[2]]
 
 @app.route('/')
 @mod.route('/')
