@@ -29,13 +29,10 @@ def pull_lang_code(endpoint, values):
     if not g.lang_code:
         g.lang_code = sites[url[2]]
 
+@app.route('/')
 @mod.route('/')
 def index():
     # Use g.lang_code to pull localized data for template
-    return 'lang = %s' % g.lang_code
-
-@app.route('/')
-def index():
     return 'lang = %s' % g.lang_code
 
 app.register_blueprint(mod)
